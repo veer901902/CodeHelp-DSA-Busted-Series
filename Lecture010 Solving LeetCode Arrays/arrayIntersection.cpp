@@ -1,7 +1,11 @@
 #include<vector>
+#include<algorithm>
 using namespace std;
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {
+	sort(arr1,arr1+n);
+        sort(arr2, arr2+m);
+	
 	int i = 0, j = 0;
     vector<int> ans;
     while(i<n && j<m) {
